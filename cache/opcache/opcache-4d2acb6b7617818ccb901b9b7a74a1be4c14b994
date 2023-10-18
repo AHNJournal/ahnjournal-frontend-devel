@@ -1,0 +1,7 @@
+<?php $exp = 1729242053; $val = array (
+  'domain' => NULL,
+  'plural-forms' => NULL,
+  'messages' => 
+  array (
+  ),
+);

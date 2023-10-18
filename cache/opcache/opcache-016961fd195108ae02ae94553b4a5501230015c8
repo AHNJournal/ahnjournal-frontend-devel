@@ -1,0 +1,47 @@
+<?php $exp = 1729242352; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.importexport.users.displayName' => 'Plugiciel XML pour utilisateurs-trices',
+      'plugins.importexport.users.description' => 'Importer et exporter des utilisateurs-trices',
+      'plugins.importexport.users.cliUsage' => 'Utilisation : {$scriptName} {$pluginName} [command] ...
+Commandes :
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+',
+      'plugins.importexport.users.cliUsage.examples' => '
+Exemples :
+	Importer des utilisateurs-trices dans myJournal à partir de myImportFile.xml :
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Exporter tous les utilisateurs-trices de myJournal  :
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Exporter les utilisateurs-trices en spécifiant leurs ID  :
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2
+',
+      'plugins.importexport.users.import.importUsers' => 'Importation d\'utilisateurs-trices',
+      'plugins.importexport.users.import.instructions' => 'Choisir un fichier de données XML contenant les renseignements à propos des utilisateurs-trices pour l\'importation dans cette revue. Voir l\'aide de la revue pour les renseignements sur le format de ce fichier.<br/><br/>Noter que si le fichier importé contient un ou plusieurs nom-s d\'utilisateur-trices ou adresse-s de courriel qui existent déjà dans le système, les données pour ces utilisateurs-trices ne seront pas importées et tous les nouveaux rôles à créer seront assignés aux utilisateurs-trices existants-es.',
+      'plugins.importexport.users.import.dataFile' => 'Fichier de données de l\'utilisateur-trice',
+      'plugins.importexport.users.import.sendNotify' => 'Envoyer à chaque utilisateur-trice importé-e un courriel d\'avis contenant le nom et le mot de passe de l\'utilisateur-trice.',
+      'plugins.importexport.users.import.continueOnError' => 'Continuer à importer d\'autres utilisateurs-trices si un échec se produit.',
+      'plugins.importexport.users.import.usersWereImported' => 'Les utilisateurs-trices suivants-es ont été importés-es avec succès dans le système',
+      'plugins.importexport.users.import.errorsOccurred' => 'Des erreurs sont se produites lors de l\'importation',
+      'plugins.importexport.users.import.confirmUsers' => 'Confirmer que ces utilisateurs-trices sont bien ceux et celles que vous souhaitez importer dans le système',
+      'plugins.importexport.users.import.warning' => 'Avertissement',
+      'plugins.importexport.users.import.encryptionMismatch' => 'Ne peut utiliser les mots de passe dont l\'algorithme de hachage est fait avec {$importHash} ; OJS est configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez reconfigurer les mots de passe des utilisateurs-trices importés-es.',
+      'plugins.importexport.users.unknownPress' => 'Un chemin d\'accès de revue inconnu « {$journalPath} » a été spécifié.',
+      'plugins.importexport.users.export.exportUsers' => 'Exporter les utilisateurs-trices',
+      'plugins.importexport.users.export.exportByRole' => 'Exporter par rôle',
+      'plugins.importexport.users.export.exportAllUsers' => 'Tout exporter',
+      'plugins.importexport.users.export.errorsOccurred' => 'Des erreurs se sont produites durant l\'exportation',
+      'plugins.importexport.users.importComplete' => 'Importation réussie. Les utilisateurs-trices dont les noms et adresses électroniques ne sont pas utilisés ont été importés-es, ainsi que les groupes d\'utilisateurs-trices connexes.',
+      'plugins.importexport.users.results' => 'Résultats',
+      'plugins.importexport.users.uploadFile' => 'Veuillez téléverser un fichier sous « Importer » pour continuer.',
+    ),
+  ),
+);

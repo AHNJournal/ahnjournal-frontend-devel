@@ -1,0 +1,14 @@
+<?php $exp = 1729242352; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.block.browse.description' => 'Ce plugiciel fournit des outils de navigation (Parcourir) dans la barre latérale.',
+      'plugins.block.browse.category' => 'Catégories',
+      'plugins.block.browse.displayName' => 'Bloc Parcourir',
+      'plugins.block.browse' => 'Parcourir',
+    ),
+  ),
+);

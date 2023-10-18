@@ -1,0 +1,18 @@
+<?php $exp = 1729242720; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'emails.manualPaymentNotification.subject' => 'Notification de paiement manuel',
+      'emails.manualPaymentNotification.body' => 'Un paiement manuel doit être traité pour la revue {$contextName} et l\'utilisateur ou utilisatrice {$senderName} (nom d\'utilisateur ou d\'utilisatrice &quot;{$senderUsername}&quot;).<br />
+<br />
+L\'élément facturé est &quot;{$paymentName}&quot;.<br />
+Le coût est de {$paymentAmount} ({$paymentCurrencyCode}).<br />
+<br />
+Ce courriel a été généré par le module de paiement manuel d\'Open Journal Systems.',
+      'emails.manualPaymentNotification.description' => 'Ce modèle de courriel est utilisé pour notifier un directeur ou une directrice de revue qu\'un paiement manuel a été demandé.',
+    ),
+  ),
+);

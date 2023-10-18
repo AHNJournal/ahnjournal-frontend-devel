@@ -1,0 +1,14 @@
+<?php $exp = 1729242352; $val = array (
+  'domain' => NULL,
+  'plural-forms' => NULL,
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.gateways.resolver.displayName' => 'Plugiciel Resolver',
+      'plugins.gateways.resolver.description' => 'Ce plugiciel résout les numéros et les articles basés sur l\'information de référence bibliographique.',
+      'plugins.gateways.resolver.errors.errorMessage' => 'Impossible de résoudre une seule entité en utilisant l\'information de référence bibliographique spécifiée. Veuillez vous assurer que l\'information de référence bibliographique est complète et qu\'elle se rapporte à une entité dans cette installation de OJS.',
+      'plugins.gateways.resolver.exportHoldings' => 'Exporter le contenu',
+    ),
+  ),
+);

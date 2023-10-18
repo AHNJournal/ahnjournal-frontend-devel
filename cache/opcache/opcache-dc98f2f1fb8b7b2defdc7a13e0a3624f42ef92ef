@@ -1,0 +1,27 @@
+<?php $exp = 1729242944; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.reports.reviews.displayName' => 'Rapport d\'évaluation',
+      'plugins.reports.reviews.description' => 'Ce plugiciel met en place un rapport CSV contenant une liste d\'assignations d\'évaluation pour une revue.',
+      'plugins.reports.reviews.round' => 'Cycle',
+      'plugins.reports.reviews.reviewerId' => 'ID de l\'évaluateur',
+      'plugins.reports.reviews.reviewer' => 'Évaluateur-trice',
+      'plugins.reports.reviews.dateAssigned' => 'Date d\'assignation',
+      'plugins.reports.reviews.dateNotified' => 'Date d\'avis',
+      'plugins.reports.reviews.dateConfirmed' => 'Date de confirmation',
+      'plugins.reports.reviews.dateCompleted' => 'Date de complétion',
+      'plugins.reports.reviews.dateReminded' => 'Date de rappel',
+      'plugins.reports.reviews.submissionTitle' => 'Titre de la soumission',
+      'plugins.reports.reviews.submissionId' => 'ID de la soumission',
+      'plugins.reports.reviews.recommendation' => 'Recommandation',
+      'plugins.reports.reviews.comments' => 'Commentaires sur la soumission',
+      'plugins.reports.reviews.responseOverdue' => 'Jour(s) de retard pour donner une réponse',
+      'plugins.reports.reviews.reviewOverdue' => 'Jour(s) de retard pour la remise de l\'évaluation',
+      'plugins.reports.reviews.dateAcknowledged' => 'Date de l\'accusé de réception (remerciement)',
+    ),
+  ),
+);

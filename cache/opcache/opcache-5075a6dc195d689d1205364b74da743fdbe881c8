@@ -1,0 +1,22 @@
+<?php $exp = 1729242352; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.reports.counter.description' => 'Le plugiciel COUNTER permet la consignation de données de consultation de la revue suivant la <a href="http://www.projectcounter.org">norme COUNTER</a>. Ces rapports ne rendent pas à eux seuls une revue conforme à la norme COUNTER. Pour offrir la conformité à COUNTER, veuillez passer en revue les exigences sur le site Web du projet COUNTER.',
+      'plugins.reports.counter' => 'Rapports COUNTER',
+      'plugins.reports.counter.release' => 'Version de COUNTER',
+      'plugins.reports.counter.error.badParameters' => 'Les paramètres du rapport sont invalides.',
+      'plugins.reports.counter.error.badRequest' => 'La requête de rapport est invalide.',
+      'plugins.reports.counter.error.noResults' => 'Aucun résultat trouvé pour ce rapport.',
+      'plugins.reports.counter.error.noXML' => 'Les résultats n\'ont pas pu être formatés en XML.',
+      'plugins.reports.counter.1a.name' => 'Rapport COUNTER JR1 (R3)',
+      'plugins.reports.counter.1a.description' => 'Rapport COUNTER de revue 1 (R3) : Requête sur des articles en plein texte par mois et par revue',
+      'plugins.reports.counter.allCustomers' => 'Tous les clients',
+      'plugins.reports.counter.ar1.title' => 'Rapport d\'article 1',
+      'plugins.reports.counter.jr1.title' => 'Rapport de revue 1',
+    ),
+  ),
+);

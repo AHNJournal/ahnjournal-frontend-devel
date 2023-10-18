@@ -1,0 +1,12 @@
+<?php $exp = 1729242720; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.block.languageToggle.displayName' => 'Bloc de changement de langue',
+      'plugins.block.languageToggle.description' => 'Ce module permet de basculer la langue dans la barre latérale.',
+    ),
+  ),
+);

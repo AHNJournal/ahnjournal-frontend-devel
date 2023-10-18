@@ -1,0 +1,23 @@
+<?php $exp = 1729242944; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n > 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.importexport.doaj.displayName' => 'Plugiciel d\'exportation DOAJ',
+      'plugins.importexport.doaj.description' => 'Exporter la revue vers DOAJ.',
+      'plugins.importexport.doaj.export.contact' => 'Communiquer avec DOAJ pour intégration',
+      'plugins.importexport.doaj.registrationIntro' => 'Si vous souhaitez enregistrer des articles à partir d\'OJS, veuillez entrer votre clé API DOAJ. Sinon, vous pourrez toujours exporter en format XML DOAJ, mais vous ne pourrez pas enregistrer vos articles avec DOAJ depuis OJS.',
+      'plugins.importexport.doaj.settings.form.apiKey' => 'Clé API DOAJ',
+      'plugins.importexport.doaj.settings.form.apiKey.description' => 'Vous trouverez votre clé API sur votre page d\'utilisateur-trice du site de DOAJ.',
+      'plugins.importexport.doaj.settings.form.automaticRegistration.description' => 'OJS déposera les articles automatiquement chez DOAJ. Veuillez noter que cela peut prendre un peu de temps suite à la publication pour le traitement (par exemple en fonction de votre configuration cronjob). Vous pouvez vérifier les articles non enregistrés.',
+      'plugins.importexport.doaj.settings.form.testMode.description' => 'Utiliser l\'API test DOAJ (environnement de test) pour l\'enregistrement. N\'oubliez pas d\'enlever cette option en mode production.',
+      'plugins.importexport.doaj.senderTask.name' => 'Tâche d\'enregistrement automatique DOAJ',
+      'plugins.importexport.doaj.register.error.mdsError' => 'Le dépôt a échoué ! L\'API DOAJ a retourné le message d\'erreur suivant : \'{$param}\'.',
+      'plugins.importexport.doaj.cliUsage' => 'Utilisation :
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+',
+    ),
+  ),
+);
