@@ -1,4 +1,4 @@
-# Stand With Ukraine
+# Stand With Ukraine 🇺🇦
 
 [![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 
@@ -22,9 +22,6 @@
 
 * [ISO Standards](#iso-standards)
 * [Installation](#installation)
-  * [Installation models](#installation-models)
-  * [Libraries with included database update](#libraries-with-included-database-update)
-  * [Library with manual database update](#library-with-manual-database-update)
 * [Translation drivers](#translation-drivers)
   * [Gettext extension driver](#gettext-extension-driver)
     * [Locale configuration](#locale-configuration)
@@ -51,22 +48,17 @@
 
 ## Installation
 
-* [Installation models](#installation-models)
-* [Libraries with included database update](#libraries-with-included-database-update)
-* [Library with manual database update](#library-with-manual-database-update)
-  
-### Installation models
-
 You may use this library in different modes:
-* `sokil/php-isocodes` - install library without database and messages and setup 
-  periodic updates of database and messages bt yourself with cron or inside CI/CD pipeline with `./bin/update_iso_codes_db.sh`
-* `sokil/php-isocodes-db-only` - if you do not need internationalisation, use 
+
+* `sokil/php-isocodes` (this library) - install library without database and messages and setup 
+  periodic updates of database and messages by yourself with cron or inside CI/CD pipeline with `./bin/update_iso_codes_db.sh`
+* [sokil/php-isocodes-db-only](https://github.com/sokil/php-isocodes-db-only) - if you do not need internationalisation, use 
   this library. Database already inside. To update database just periodically update this library.
-* `sokil/php-isocodes-db-i18n` - if you need internationalisation, use
+* [sokil/php-isocodes-db-i18n](https://github.com/sokil/php-isocodes-db-i18n) - if you need internationalisation, use
   this library. Database and messages already inside. To update database 
   just periodically update this library.
 
-### Libraries with included database update
+#### 💾 Library with included database and localization
 
 To install [library with database and i18n](https://github.com/sokil/php-isocodes-db-i18n):
 
@@ -78,6 +70,8 @@ To install [library with database and i18n](https://github.com/sokil/php-isocode
 composer require sokil/php-isocodes-db-i18n
 ```
 
+#### 💾 Library with included database and without localization
+
 You may also install [library with only database](https://github.com/sokil/php-isocodes-db-only) (no i18n will be available):
 
 [![Latest Stable Version](https://poser.pugx.org/sokil/php-isocodes-db-only/v/stable.png)](https://packagist.org/packages/sokil/php-isocodes-db-only)
@@ -88,9 +82,10 @@ You may also install [library with only database](https://github.com/sokil/php-i
 composer require sokil/php-isocodes-db-only
 ```
 
-### Library with manual database update
+#### 💾 Library without database and localization, requires manual database installation and updates
 
 You can install library through Composer:
+
 ```
 composer require sokil/php-isocodes
 ```
@@ -98,7 +93,7 @@ composer require sokil/php-isocodes
 Database and gettext files located in related packages inside `databases` and `messages` directories.
 This packages periodically updated with package version increment.
 
-If you want to update database more often, use script `./bin/update_iso_codes_db.sh`.
+If you want to update database, use script `./bin/update_iso_codes_db.sh`.
 Call this script by cron, during deploy process or when build your docker image.
 
 ```
@@ -253,7 +248,7 @@ $isoCodes = new IsoCodesFactory(
 
 ### Factory
 
-All databases may be create through factory:
+All databases may be created through factory:
 
 ```php
 <?php
@@ -292,6 +287,34 @@ This may require a lot of RAM for storing all entries.
      
 ### Countries database (ISO 3166-1)
 
+Country contains next names:
+
+| Name           | Description | Example              |
+|----------------|-------------|----------------------|
+| Name           | Required    | Moldova, Republic of |
+| Official Name  | Optional    | Republic of Moldova  |
+| Common Name    | Optional    | Moldova              |
+| Localised Name | Optional    | Молдова              |
+
+This names may be get from country entity:
+
+```php
+$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+$country = $isoCodes->getCountries()->getByAlpha2('UA');
+echo $country->getName();
+echo $country->getLocalName();
+echo $country->getOfficialName();
+echo $country->getCommonName();
+```
+
+Also you may get flag of country:
+
+```php
+$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+$country = $isoCodes->getCountries()->getByAlpha2('UA');
+echo $country->getFlag();
+```
+
 Get localized name of country by it's alpha2 code:
 ```php
 $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
@@ -301,13 +324,13 @@ $isoCodes->getCountries()->getByAlpha2('UA')->getLocalName();
 Get localized name of country by it's alpha2 code:
 ```php
 $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
-$isoCodes->getCountries()->getByAlpha2('UKR')->getName();
+$isoCodes->getCountries()->getByAlpha2('UKR')->getLocalName();
 ```
 
 Get localized name of country by it's numeric code:
 ```php
 $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
-$isoCodes->getCountries()->getByAlpha2('804')->getName();
+$isoCodes->getCountries()->getByAlpha2('804')->getLocalName();
 ```
 
 Get  localised list of countries

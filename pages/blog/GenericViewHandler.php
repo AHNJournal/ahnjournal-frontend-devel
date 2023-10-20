@@ -3,14 +3,14 @@
 /**
  * @file pages/blog/GenericViewHandler.php
  *
- * Copyright (c) 2023 Jack Bortone
+ * Copyright (c) 2023 Jack Bortone <smart@open-neurosecurity.org>
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class GenericViewHandler.php
  *
  * @ingroup pages_blog
  *
- * @brief Handle requests for journal about functions.
+ * @brief Handle requests for blog publishing functions. Renders dynamically html content from the wp_posts table using default table-level permissions. Internally uses mysqlnd or pkp library to perform the SQL query and fetch articles.
  */
 
 namespace APP\pages\blog;
@@ -27,15 +27,16 @@ class GenericViewHandler extends \PKP\pages\about\AboutContextHandler
      *
      * @param array $args
      * @param \APP\core\Request $request
-     */
-    public function subscriptions($args, $request)
-    {
+	 */
+	// subscriptions->wp_article_set
+    public function wp_article_set($args, $request, $tableName = "wp_posts")
+	{
         $templateMgr = TemplateManager::getManager($request);
         $this->setupTemplate($request);
         $journal = $request->getJournal();
 
         $templateMgr->assign([
-            'slogan' => 'With free neurosecurity you have freedom!'
+            'articles' => array()
         ]);
         $templateMgr->display('frontend/pages/blog/index.tpl');
     }

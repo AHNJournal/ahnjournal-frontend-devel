@@ -41,8 +41,10 @@ class ComposerStaticInitfb3fc6124dcf883f82128b0a9d5168e6
         ),
         'H' => 
         array (
+            'Http\\Promise\\' => 13,
             'Http\\Message\\' => 13,
             'Http\\Discovery\\' => 15,
+            'Http\\Client\\' => 12,
             'Http\\Adapter\\Guzzle7\\' => 21,
         ),
         'G' => 
@@ -95,14 +97,22 @@ class ComposerStaticInitfb3fc6124dcf883f82128b0a9d5168e6
         array (
             0 => __DIR__ . '/..' . '/moneyphp/money/src',
         ),
+        'Http\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-http/promise/src',
+        ),
         'Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
-            1 => __DIR__ . '/..' . '/php-http/message/src',
+            0 => __DIR__ . '/..' . '/php-http/message/src',
+            1 => __DIR__ . '/..' . '/php-http/message-factory/src',
         ),
         'Http\\Discovery\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/discovery/src',
+        ),
+        'Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-http/httplug/src',
         ),
         'Http\\Adapter\\Guzzle7\\' => 
         array (

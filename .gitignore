@@ -1,5 +1,5 @@
 config.*.php
-
+node_modules/*
 tests
 *.*~
 *.bak
@@ -9,3 +9,5 @@ tests
 *.local.*
 wp-content/uploads
 static
+cache/*
+package-lock.json
